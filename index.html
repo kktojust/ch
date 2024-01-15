@@ -17,18 +17,24 @@
     <div>2</div>
     <div class="box3"></div>
   </div>
+  <div class="cont3">
+    <div>2</div>
+    <div class="box4"></div>
+  </div>
   <br />
-  <div><button class="btn1">打开新窗口，3s后填充链接</button></div>
+  <div><button class="btn1">打开无连接窗口，3s后填充链接</button></div>
   <br />
+  <div><button class="btn2">直接打开链接</button></div>
   <br />
-  <br />
-  <div><button class="btn2">新窗口打开链接</button></div>
+  <div><button class="btn3">打开链接a, 3s后填充链接b</button></div>
   <script>
     const btn1 = document.querySelector(".btn1");
     const btn2 = document.querySelector(".btn2");
+    const btn3 = document.querySelector(".btn3");
     const box1 = document.querySelector(".box1");
     const box2 = document.querySelector(".box2");
     const box3 = document.querySelector(".box3");
+    const box4 = document.querySelector(".box4");
 
     btn1.addEventListener("click", () => {
       const t = window.open("", "_blank");
@@ -41,6 +47,13 @@
     btn2.addEventListener("click", () => {
       const t = window.open("https://github.com/", "_blank");
       box3.innerHTML = String(t);
+    });
+    btn3.addEventListener("click", () => {
+      const t = window.open("https://github.com/", "_blank");
+      box4.innerHTML = String(t);
+      setTimeout(() => {
+        t.location.href = "https://github.com/team";
+      }, 3000);
     });
   </script>
 </body>
