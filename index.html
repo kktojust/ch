@@ -16,6 +16,7 @@
     const dom2 = document.querySelector(".cont2");
     dom.addEventListener("click", () => {
       const t = window.open("");
+      alert("res" + t);
       dom1.innerHTML = String(t);
       setTimeout(() => {
         t.location.href = "https://wwww.baidu.com";
