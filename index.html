@@ -7,21 +7,37 @@
   <title>test</title>
 </head>
 <body>
-  <div class="cont1">1</div>
-  <div class="cont2">2</div>
-  <div><button>open</button></div>
+  <div class="cont1">
+    <div>1</div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+  <div class="cont2">
+    <div>2</div>
+    <div class="box3"></div>
+  </div>
+  <div><button class="btn1">open</button></div>
+  <div><button class="btn2">open2</button></div>
   <script>
-    const dom = document.querySelector("button");
-    const dom1 = document.querySelector(".cont1");
-    const dom2 = document.querySelector(".cont2");
-    dom.addEventListener("click", () => {
+    const btn1 = document.querySelector(".btn1");
+    const btn2 = document.querySelector(".btn2");
+    const box1 = document.querySelector(".box1");
+    const box2 = document.querySelector(".box2");
+    const box3 = document.querySelector(".box3");
+
+    btn1.addEventListener("click", () => {
       const t = window.open("");
       alert("res" + t);
-      dom1.innerHTML = String(t);
+      box1.innerHTML = String(t);
       setTimeout(() => {
         t.location.href = "https://wwww.baidu.com";
-        dom2.innerHTML = String(t);
+        box2.innerHTML = String(t);
       }, 3000);
+    });
+    btn2.addEventListener("click", () => {
+      const t = window.open("https://wwww.baidu.com");
+      alert("res" + t);
+      box3.innerHTML = String(t);
     });
   </script>
 </body>
