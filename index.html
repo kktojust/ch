@@ -12,11 +12,16 @@
     <div class="box1"></div>
     <div class="box2"></div>
   </div>
+  <br />
   <div class="cont2">
     <div>2</div>
     <div class="box3"></div>
   </div>
+  <br />
   <div><button class="btn1">open</button></div>
+  <br />
+  <br />
+  <br />
   <div><button class="btn2">open2</button></div>
   <script>
     const btn1 = document.querySelector(".btn1");
@@ -30,12 +35,12 @@
       alert("res" + t);
       box1.innerHTML = String(t);
       setTimeout(() => {
-        t.location.href = "https://wwww.baidu.com";
+        t.location.href = "https://github.com/";
         box2.innerHTML = String(t);
       }, 3000);
     });
     btn2.addEventListener("click", () => {
-      const t = window.open("https://wwww.baidu.com", "_blank");
+      const t = window.open("https://github.com/", "_blank");
       alert("res" + t);
       box3.innerHTML = String(t);
     });
